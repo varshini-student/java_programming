@@ -1,6 +1,6 @@
 // printing a single character
 import java.util.Scanner;
-public class Main{
+public class program2{
     public static void main(String args[]){
         Scanner scan = new Scanner(System.in);
         char ch =scan.next().charAt(0);
