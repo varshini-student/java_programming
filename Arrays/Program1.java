@@ -1,5 +1,6 @@
 // Anagram
-class Solution {
+import java.util.Arrays;
+class Program1{
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
 
@@ -8,12 +9,13 @@ class Solution {
                 t.chars().sorted().toArray()
         );
     }
-
-    public static void main(String[] args) {
-
-        Solution obj = new Solution();
-
-        System.out.println(obj.isAnagram("anagram", "nagaram"));
-        System.out.println(obj.isAnagram("rat", "car"));
-    }
 }
+
+//     public static void main(String[] args) {
+
+//         Solution obj = new Solution();
+
+//         System.out.println(obj.isAnagram("anagram", "nagaram"));
+//         System.out.println(obj.isAnagram("rat", "car"));
+//     }
+// }

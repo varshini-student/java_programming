@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main{
+public class Program7{
     public static void main(String args[]){
         Scanner scan=new Scanner(System.in);
         float L=scan.nextFloat();
