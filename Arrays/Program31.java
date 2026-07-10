@@ -6,7 +6,7 @@ class Solution {
         for(int index=0;index<temperatures.length;index++){
             while(!pos.isEmpty()&&
             temperatures[pos.peek()]<temperatures[index]){
-                int popped=pos.pop();
+                int popped=pos.pop();giy
                 res[popped]=index-popped;
             }
             pos.push(index);
