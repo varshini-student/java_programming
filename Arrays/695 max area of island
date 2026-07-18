@@ -1,0 +1,52 @@
+class Solution {
+
+    public int maxAreaOfIsland(int[][] grid) {
+
+        int rows = grid.length;
+        int cols = grid[0].length;
+        int maxArea = 0;
+
+        // Traverse every cell
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+
+                // If land is found
+                if (grid[i][j] == 1) {
+
+                    // Find the area of this island
+                    int area = dfs(grid, i, j);
+
+                    // Update maximum area
+                    maxArea = Math.max(maxArea, area);
+                }
+            }
+        }
+
+        return maxArea;
+    }
+
+    // DFS function to calculate area of one island
+    private int dfs(int[][] grid, int row, int col) {
+
+        // Base Case
+        if (row < 0 || row >= grid.length ||
+            col < 0 || col >= grid[0].length ||
+            grid[row][col] == 0) {
+            return 0;
+        }
+
+        // Mark current cell as visited
+        grid[row][col] = 0;
+
+        // Count current cell
+        int area = 1;
+
+        // Explore all four directions
+        area += dfs(grid, row + 1, col); // Down
+        area += dfs(grid, row - 1, col); // Up
+        area += dfs(grid, row, col + 1); // Right
+        area += dfs(grid, row, col - 1); // Left
+
+        return area;
+    }
+}
