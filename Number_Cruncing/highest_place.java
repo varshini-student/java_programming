@@ -9,5 +9,6 @@ public class highest_place{
             n=n/10;
         }
         System.out.println(digit);
+        
     }
 }
